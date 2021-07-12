@@ -2,7 +2,7 @@ name: scrape
 on:
   workflow_dispatch:
   schedule:
-    - cron: '* */4 * * *'
+    - cron: '0 */4 * * *'
 jobs:
   scrape_and_email:
     runs-on: ubuntu-latest
