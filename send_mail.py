@@ -3,7 +3,7 @@ import base64
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import (Mail, Attachment, FileContent, FileName, FileType, Disposition)
 
-change_url = f"https://github.com/jsoma/autoscraper-history/commit/{os.environ.get('COMMIT_HASH')}"
+change_url = f"https://github.com/{os.environ.get('GITHUB_REPOSITORY')}/commit/{os.environ.get('COMMIT_HASH')}"
 message = Mail(
     from_email=os.environ.get('FROM_EMAIL'),
     to_emails=os.environ.get('TO_EMAIL'),
