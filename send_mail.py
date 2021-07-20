@@ -27,11 +27,13 @@ attachedFile = Attachment(
 )
 message.attachment = attachedFile
 
-try:
-    sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
-    response = sg.send(message)
-    print(response.status_code)
-    print(response.body)
-    print(response.headers)
-except Exception as e:
-    print(e.message)
+# Commenting this out because I actually don't want to get emails!
+# But if you want to use it, just uncomment it (down to the print section)
+# try:
+#     sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+#     response = sg.send(message)
+#     print(response.status_code)
+#     print(response.body)
+#     print(response.headers)
+# except Exception as e:
+#     print(e.message)
